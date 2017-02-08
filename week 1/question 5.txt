@@ -1,0 +1,2 @@
+question 5
+A branch is an alternative place to commit files in the repository. It is so that the master branch is kept clean. When commits in a branch are accepted, they are added to the master branch.
