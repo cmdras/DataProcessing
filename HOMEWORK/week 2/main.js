@@ -1,12 +1,29 @@
-var data = document.getElementById('rawdata').value.split('\n');
-var dates = new Array();
-var temperatures = new Array();
+/*
+Homework week 2
+Chris Ras
+10689958
+*/
+
+// variables to be used throughout the code
 var numberOfMonths = 12;
+var numberOfDays
 var transform;
 var padding;
 var domainBounds
+
+
+// get the temperature data
+var request = new XMLHttpRequest();
+request.open("GET", "data_cleaned.txt", false)
+request.send();
+var requestText = request.responseText;
+var data = requestText.split('\n');
+var dates = new Array();
+var temperatures = new Array();
 var dataLength = data.length;
-var numberOfDays = dataLength - 2;
+numberOfDays = dataLength - 2;
+
+
 // i starts at 1 to skip initial line
 for (var i = 1; i < dataLength - 1; i++) {
 	var value = data[i].split(',');
@@ -16,9 +33,10 @@ for (var i = 1; i < dataLength - 1; i++) {
 	temperatures.push(value[1].trim())
 }
 
+
+// create canvas
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-
 configureCanvas();
 addDataToCanvas();
 
@@ -26,10 +44,11 @@ addDataToCanvas();
 
 // function makes the string from the data compatible with the Date function
 function parseDate(dateString) {
-	var newDate = dateString.substring(0,4)+"-"+dateString.substring(4,6)+"-"+dateString.substring(6,8)
+	var newDate = dateString.substring(0,4) + "-" + dateString.substring(4,6) + "-" + dateString.substring(6,8)
 	return newDate
 }
 
+// function that creates datapoints based on the temperatures
 function createTransform(domain, range){
     var domain_min = domain[0]
     var domain_max = domain[1]
@@ -46,17 +65,17 @@ function createTransform(domain, range){
     }
 }
 
+// finds the minimum and maximum temperatures of the dataset
 function findDomain(temperatures) {
 	var min = 0;
 	var max = 0
-	for(var i=0; i<temperatures.length; i++) {
+	for(var i=0; i < temperatures.length; i++) {
 		if (parseInt(temperatures[i]) < min) {
 			min = parseInt(temperatures[i])
 		} else if (parseInt(temperatures[i]) > max) {
 			max = parseInt(temperatures[i])
 		}
 	}
-	
 	return [min, max]
 }
 
@@ -86,15 +105,15 @@ function configureCanvas() {
 	ctx.moveTo(padding, c.height - padding);
 	ctx.lineTo(c.width, c.height - padding);
 	ctx.stroke();
-	
-	for (i=0; i <= numberOfMonths;i++){
-	    ctx.fillText(xAxisLabels[i], (i+1) * xLabelSpacing - 10, c.height - 10);
+	for (i = 0; i <= numberOfMonths; i++){
+	    ctx.fillText(xAxisLabels[i], (i + 1) * xLabelSpacing - 10, c.height - 10);
 	}
-	for (i=0;i<= yAxisLabels.length - 1 ; i++){
+	for (i = 0; i <= yAxisLabels.length - 1; i++){
 	    ctx.fillText(yAxisLabels[i], 5, i * yLabelSpacing + padding);
 	}
 }
 
+// creates the graph based on the datapoints
 function addDataToCanvas(){
 	// spacing of the datapoints
 	var xValueSpacing = c.width / numberOfDays;
@@ -111,9 +130,10 @@ function addDataToCanvas(){
 	ctx.stroke();
 }
 
+// returns an array of temperatures that should be used for the y-axis labels
 function temperatureRange(bounds){
-	var difference = bounds[1]-bounds[0]
-	var steps = difference/10
+	var difference = bounds[1] - bounds[0]
+	var steps = difference / 10
 	var range = new Array;
 	for(var i = bounds[1]; i >= bounds[0]; i = i - steps){
 		range.push(Math.round(parseInt(i)/10))
