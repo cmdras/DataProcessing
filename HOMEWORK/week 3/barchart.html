@@ -1,0 +1,76 @@
+<!– 
+/*
+Homework week 3
+Chris Ras
+10689958
+*/
+–>
+
+<!DOCTYPE html>
+<html>
+  
+  <style>
+
+	.bar {
+	  fill: steelblue;
+	}
+	.bar:hover {
+		fill: darkred;
+	}
+
+	.axis text {
+	  font: 10px sans-serif;
+	}
+
+	.axis path,
+	.axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}
+	.x.axis path {
+	  display: none;
+	}
+
+	.tooltip {
+		font: 12px arial, sans-serif;
+		color: LightSalmon;
+		background: Aqua;   
+  		border: 0px;      
+  		border-radius: 10px;
+	}
+
+	#main {
+		width:800px; 
+		margin:0 auto;
+	}
+
+  </style>
+
+  <head>
+  	<title>Homework 3</title>
+  </head>
+
+  <body>
+  <div id = "main">
+  	<p>
+  		<h2>Average Rainfall in De Bilt in 2015</h2>
+  	</p>
+
+  	</p>
+  		<h5>Chris Ras</h5>
+  		<h5>10689958</h5>
+  	<p>
+
+  	<p>
+  	<svg class="chart"></svg>
+  	<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  	<script src="script.js"></script>
+  	</p>
+
+  	<p>
+  		<a href="http://projects.knmi.nl/klimatologie/daggegevens/selectie.cgi">Source</a>
+  	</p>
+  </div>
+  </body>
+</html>
