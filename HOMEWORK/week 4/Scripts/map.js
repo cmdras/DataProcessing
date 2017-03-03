@@ -8,7 +8,7 @@ Chris Ras
 
 window.onload = function() {
 	// load data
-	d3.json("../Data/h1n1_data.json", function(dataset) {
+	d3.json("../week%204/Data/h1n1_data.json", function(dataset) {
 
 		// initiate map
 		$("#container").datamap({
