@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<head>
+	<title>Week 4</title>
+	<link rel="stylesheet" type="text/css" href="Styles/style.css">
+	<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+	<script src="http://datamaps.github.com/scripts/datamaps-all.js"></script>
+	<script src="Scripts/map.js"></script>
+</head>
+
+<body>
+	<div id="header">
+		<h3>H1N1 Pandemic (2009) Map</h3><br/>
+		<p>This map shows per country how many cases of the H1N1 virus (swine flu) have been reported, as well as how many deaths have been reported.</p>
+	</div>
+	<div id="container" style="height: 500px; width: 960px"></div>
+	<div id="text">
+		<p>Source: <a href="https://en.wikipedia.org/wiki/2009_flu_pandemic_by_country">Wikipedia</a></p>
+		<p>
+			The mouseover effects that are present in this map include a popup which displays some information. When hovering over a specific country, its name is shown in the popup. If data is present from that country, the popup will also show how many cases of H1N1 have been reported by that specific country, and how many deaths have been reported. Furthermore, the border of the country changes color when hovering, this is to emphasize which country is being selected.
+		</p>
+		<p>
+			The colors of each country are based on how many cases of H1N1 have been reported. Countries that are not in the dataset are pictured gray. Highly affected countries are shown in red, and the least affected countries are shown in light yellow. Because the coloring is based on the amount of cases and not deaths, the map is not a representation of in which countries the disease was deadliest. The amount of deaths is only shown in the popup as additional information.
+		</p>
+	</div>
+</body>

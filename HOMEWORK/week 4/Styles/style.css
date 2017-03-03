@@ -1,0 +1,9 @@
+#header, #container {
+	display: table;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+h3 {
+	text-align: center;
+}
