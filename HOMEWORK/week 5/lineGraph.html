@@ -1,0 +1,39 @@
+<!-- 
+Homework week 5
+Chris Ras
+10689958 
+-->
+
+<!DOCTYPE html>
+<head>
+	<title>Week 5</title>
+	<link rel="stylesheet" type="text/css" href="Style/style.css">
+	<script src="Scripts/d3.v4.min.js" charset="utf-8"></script>
+	<script src="Scripts/lines.js" charset="utf-8"></script>
+
+</head>
+
+<body>
+	<!-- 
+		Wrapper so everything is aligned underneath each other
+	-->
+	<div id = "wrapper">
+		<div id = "title">
+			<h3>Average Temperature in De Bilt</h3>
+			<h5>Chris Ras</h5>
+			<h5>10689958</h5>
+		</div>
+		<div class = "dropdown">
+			<button onclick="buttonPressed()" class="dropbtn">Year</button>
+			<div id="myDropdown" class="dropdown-content">
+	    		<a class="m" href="#" value="2015">2015</a>
+	    		<a class="m" href="#" value="2016">2016</a>
+	  		</div>
+		</div>
+
+		<div>
+			<svg width="960" height="500"></svg>
+		</div>
+	</div>
+
+</body>
