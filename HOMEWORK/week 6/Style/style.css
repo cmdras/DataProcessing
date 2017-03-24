@@ -11,7 +11,7 @@ body{
 #head, #mapTitle {
 	color: #e6550d
 }
-#head, #mapTitle, #buttonDiv {
+#head, #mapTitle, #buttonDiv, #instructions {
 	float: center;
 	text-align: center;
 }
