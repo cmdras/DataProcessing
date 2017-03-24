@@ -5,18 +5,43 @@ Chris Ras
 -->
 
 <!DOCTYPE html>
+<html>
+	<head>
+		<title>Week 6-7</title>
+		<link href="Style/ExternalStylesheets/Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="Style/style.css">
+		<script src="Scripts/ExternalScripts/d3.v3.min.js" charset="utf-8"></script>
+		<script src="Scripts/ExternalScripts/d3-queue.v3.min.js" charset="utf-8"></script>
+		<script src="Scripts/ExternalScripts/topojson.v2.min.js"></script>
+		<script src="Scripts/ExternalScripts/datamaps.world.min.js"></script>
+		<script src="Scripts/ExternalScripts/jquery.min.js"></script>
+		<script src="Scripts/ExternalScripts/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+		<script src="Scripts/happiness.js"></script>
+	</head>
 
-<head>
-	<title>Week 6-7</title>
-	<script src="Scripts/d3.v3.min.js" charset="utf-8"></script>
-	<script src="Scripts/d3-queue.v3.min.js" charset="utf-8"></script>
-	<script src="Scripts/topojson.v2.min.js"></script>
-	<script src="Scripts/datamaps.world.min.js"></script>
-	<script src="Scripts/happiness.js"></script>
-</head>
+	<body>
+		<ul class="nav nav-tabs">
+			<li role="presentation" class="active"><a href="#">Visualisation</a></li>
+			<li role="presentation"><a href="story.html">Story</a></li>
+		</ul>
 
-<body>
-	<div id="container" style="position: relative; width: 1000px; height: 600px;"></div>
-
-	</div>
-</body>
+		<div id="head">
+			<h3>Happiness vs Quality of Life</h3>
+			<h5>Chris Ras</h5>
+			<h5>10689958</h5>
+		</div>
+		<div id="mapTitle"></div>
+		<div id="worldMap">
+			<div id="container" style="position: relative; width: 1000px; height: 600px;"></div>
+		</div>
+		<div id="scatter"></div>
+		<div id="buttonDiv"></div>
+		<div id="sources">
+			Sources: <br/>
+			<ul>
+			<li><a href="http://happyplanetindex.org">Happy Planet Index</a></li>
+			<li><a href="https://www.numbeo.com/quality-of-life/rankings_by_country.jsps">Quality of Life</a></li>
+			</ul>
+		</div>
+	</body>
+</html>

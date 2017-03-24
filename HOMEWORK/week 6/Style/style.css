@@ -1,0 +1,34 @@
+/*
+Homework week 6
+Chris Ras
+10689958
+*/
+
+body{
+	background-color: lightcyan
+}
+
+#head, #mapTitle {
+	color: #e6550d
+}
+#head, #mapTitle, #buttonDiv {
+	float: center;
+	text-align: center;
+}
+
+.tooltip {	
+    position: absolute;		
+    text-align: center;			
+    width: 175px;					
+    height: 65px;									
+    font: 12px arial;
+    background-color: lightblue;
+    border:1px solid black;	
+}
+
+#story {
+	word-wrap: break-word;
+	width: 800px;
+	position: absolute;
+	left: 20%;
+}
